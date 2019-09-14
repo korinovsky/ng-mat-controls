@@ -1,0 +1,9 @@
+<mat-form-field>
+    <mat-label>{{label}}</mat-label>
+    <input
+        matInput
+        [formControl]="formControl"
+    >
+    <mat-hint>{{hint}}</mat-hint>
+    <mat-error *ngFor="let error of errorMessages">{{error}}</mat-error>
+</mat-form-field>
