@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {DatepickerComponent} from './datepicker.component';
 import {MatDatepickerModule, MatInputModule} from '@angular/material';
 import {MatMomentDateModule} from '@angular/material-moment-adapter';
-import {dateLocaleProvider, formFieldOptionsProvider} from '../components.provider';
+import {dateFormatProvider, dateLocaleProvider, formFieldOptionsProvider} from '../components.provider';
 import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
@@ -21,6 +21,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     providers: [
         formFieldOptionsProvider,
         dateLocaleProvider,
+        dateFormatProvider,
     ]
 })
 export class DatepickerModule {
