@@ -6,8 +6,14 @@
         [formControl]="inputControl"
         [matDatepicker]="picker"
     >
-    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-    <mat-datepicker #picker></mat-datepicker>
+    <mat-datepicker-toggle
+        matSuffix
+        [for]="picker"
+    ></mat-datepicker-toggle>
+    <mat-datepicker
+        #picker
+        [startView]="startView"
+    ></mat-datepicker>
     <mat-hint>{{hint}}</mat-hint>
     <mat-error *ngFor="let error of errorMessages">{{error}}</mat-error>
 </mat-form-field>

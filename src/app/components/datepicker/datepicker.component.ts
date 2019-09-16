@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, Validators} from "@angular/forms";
-import {FormFieldClass} from "../components.model";
+import {Component, Input, OnInit} from '@angular/core';
+import {FormControl, Validators} from '@angular/forms';
+import {FormFieldClass} from '../components.model';
 
 @Component({
     selector: 'app-datepicker',
@@ -8,6 +8,8 @@ import {FormFieldClass} from "../components.model";
     styleUrls: ['./datepicker.component.scss']
 })
 export class DatepickerComponent extends FormFieldClass implements OnInit {
+    @Input()
+    startView: 'month' | 'year' | 'multi-year' = 'month';
     inputControl = new FormControl(null, Validators.required);
 
     ngOnInit() {
